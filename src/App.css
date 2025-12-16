@@ -1,0 +1,104 @@
+:root {
+  --bg-dark: #0f1115;
+  --panel-bg: #1a1d24;
+  --accent: #d4af37; /* Gold */
+  --accent-hover: #f3ce5e;
+  --danger: #8b0000;
+  --text-main: #e0e0e0;
+  --text-muted: #888;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.panel {
+  background: var(--panel-bg);
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+.panel h2 {
+  color: var(--accent);
+  border-bottom: 1px solid #333;
+  padding-bottom: 0.5rem;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Inputs */
+.api-input, textarea {
+  width: 100%;
+  background: #0f1115;
+  border: 1px solid #444;
+  color: white;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  box-sizing: border-box; /* Important for padding */
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Buttons */
+.rpg-btn {
+  background: #2a2f3a;
+  color: #fff;
+  border: 1px solid #444;
+  padding: 12px;
+  width: 100%;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  transition: all 0.2s;
+  margin-bottom: 0.5rem;
+  border-radius: 4px;
+}
+
+.rpg-btn:hover {
+  background: #3a4050;
+  border-color: var(--accent);
+}
+
+.rpg-btn.active {
+  background: var(--accent);
+  color: #000;
+  box-shadow: 0 0 10px var(--accent);
+}
+
+.rpg-btn.stop {
+  background: var(--danger);
+  margin-top: 1rem;
+}
+
+.sfx-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.loading {
+  opacity: 0.5;
+  pointer-events: none;
+}
